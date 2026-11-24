@@ -32,14 +32,14 @@ Hooks are defense in depth. `/ship` independently asks the user, separately for 
 Requires Python 3 (`python3` or `python`) on PATH for the safety hook.
 
 ```text
-/plugin install dev-harness --marketplace <owner>/<repo>
+/plugin install dev-harness --marketplace dhanasekar333/dev-harness-plugin
 ```
 (Claude Code 2.1.275 or later.) On older versions:
 ```text
-/plugin marketplace add <owner>/<repo>
+/plugin marketplace add dhanasekar333/dev-harness-plugin
 /plugin install dev-harness@dev-harness-marketplace
 ```
-Replace `<owner>/<repo>` with the GitHub repository that holds this marketplace (or a local path).
+The marketplace lives at https://github.com/dhanasekar333/dev-harness-plugin.
 
 ## Local testing
 
