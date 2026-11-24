@@ -1,0 +1,11 @@
+{
+  "name": "dev-harness-marketplace",
+  "owner": { "name": "Bitcot" },
+  "plugins": [
+    {
+      "name": "dev-harness",
+      "source": "./dev-harness",
+      "description": "Approval-driven development lifecycle: grill, plan, build, QA, audit, ship."
+    }
+  ]
+}

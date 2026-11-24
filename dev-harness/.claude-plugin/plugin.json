@@ -1,0 +1,8 @@
+{
+  "name": "dev-harness",
+  "version": "1.0.0",
+  "description": "Approval-driven development lifecycle: grill requirements, plan, build with subagents, QA, audit, and ship with explicit commit/push gates.",
+  "author": { "name": "Bitcot" },
+  "license": "MIT",
+  "keywords": ["workflow", "requirements", "planning", "qa", "code-review", "safety"]
+}
