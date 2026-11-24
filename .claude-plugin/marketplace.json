@@ -1,6 +1,7 @@
 {
   "name": "dev-harness-marketplace",
   "owner": { "name": "Bitcot" },
+  "description": "Marketplace for the dev-harness Claude Code plugin.",
   "plugins": [
     {
       "name": "dev-harness",
