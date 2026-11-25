@@ -1,18 +1,37 @@
 {
   "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo \"DEV-HARNESS PROTOCOL ACTIVE: You MUST NOT write application code directly when asked to build or create an app or feature. Always follow this exact sequence: 1) Invoke dev-harness:grill first to interview the user and write docs/SPEC.md. 2) Once confirmed, invoke dev-harness:plan-app to write docs/PLAN.md. 3) Once approved, invoke dev-harness:build-app to delegate coding, QA, and review to subagents.\""
+          }
+        ]
+      }
+    ],
     "PreToolUse": [
       {
         "matcher": "Bash|PowerShell",
         "hooks": [
-          { "type": "command", "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/guard.py\" || python \"${CLAUDE_PLUGIN_ROOT}/hooks/guard.py\"", "timeout": 10 }
+          {
+            "type": "command",
+            "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/guard.py\" || python \"${CLAUDE_PLUGIN_ROOT}/hooks/guard.py\"",
+            "timeout": 10
+          }
         ]
       },
       {
         "matcher": "Write|Edit|NotebookEdit",
         "hooks": [
-          { "type": "command", "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/guard.py\" || python \"${CLAUDE_PLUGIN_ROOT}/hooks/guard.py\"", "timeout": 10 }
+          {
+            "type": "command",
+            "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/guard.py\" || python \"${CLAUDE_PLUGIN_ROOT}/hooks/guard.py\"",
+            "timeout": 10
+          }
         ]
       }
     ]
   }
 }
+

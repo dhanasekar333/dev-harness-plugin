@@ -47,3 +47,5 @@ Status: APPROVED   (date)
 ```
 
 Unresolved items go under section 13, never silently decided. End by telling the user to run `/dev-harness:plan-app`.
+
+After the user confirms docs/SPEC.md, immediately invoke the dev-harness:plan-app skill.

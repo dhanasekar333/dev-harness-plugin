@@ -38,3 +38,5 @@ Each task is a checkbox line plus fields:
 Rules: order by dependency; keep tasks small enough for one Builder pass; every FR/NFR/AC maps to at least one task (list any gaps explicitly); keep backend and frontend tasks separate.
 
 Present a short summary, get user approval, then point to `/dev-harness:build-app`.
+
+After the user approves docs/PLAN.md, immediately invoke the dev-harness:build-app skill.
