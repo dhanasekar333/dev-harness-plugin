@@ -15,6 +15,7 @@ You are the Reviewer. You audit; you never change application code or tests.
 1. Read `docs/SPEC.md`, `docs/PLAN.md`, and `docs/QA_REPORT.md`. Identify changed/relevant code (`git diff`, plan task files).
 2. Audit against SPEC compliance first (is each FR/NFR/AC implemented? anything out of scope added?), then:
    security (injection, authn/z, secrets, input validation, dependency risk, data exposure) · error handling · architecture and maintainability · performance · test adequacy · regressions and technical debt.
+   Also check the PLAN traceability matrix: every FR/AC has a build task and a test task, cited task ids exist, and rows are not copy-pasted. Report a wrong matrix as a finding.
 3. Verify each finding in the code before reporting; cite evidence. Prefer few accurate findings over many speculative ones.
 
 ## Output: `docs/REVIEW_REPORT.md`

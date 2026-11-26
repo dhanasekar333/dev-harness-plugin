@@ -35,7 +35,16 @@ Each task is a checkbox line plus fields:
   Acceptance: <observable, testable criteria>
   Patterns: backend-patterns | frontend-patterns
 ```
-Rules: order by dependency; keep tasks small enough for one Builder pass; every FR/NFR/AC maps to at least one task (list any gaps explicitly); keep backend and frontend tasks separate.
+Rules: order by dependency; keep tasks small enough for one Builder pass; keep backend and frontend tasks separate.
+
+### Traceability matrix rules
+Format: `| Req id | Build task(s) | Verification task(s) |`, one row per FR, NFR and AC.
+- Every **FR** and **AC** maps to **both** its implementation task(s) AND its verification/test task(s), e.g. build `T3 (API), T6 (UI)`, verify `T7 (Browser QA), T8 (Pytest)`. This means the plan must contain explicit test tasks, so create them.
+- Do not paste the same task list into every row unless tasks are strictly layer-based. If they are, still separate backend verification (e.g. `T8`) from UI verification (e.g. `T7`) for every user-facing FR.
+- Derive each row from the task's `Implements:` field and the requirement's actual content; a row that does not match what the task does is wrong.
+- Write "No gaps" only if every FR and AC has at least one build task and one test task. Otherwise list each gap by id.
+
+**Self-check before presenting the plan** (this is where past matrices went wrong): re-read the finished matrix against the task list. Confirm every id in SPEC appears as a row, every task id cited exists, every cited task really lists that requirement in `Implements:`, and every FR/AC has a build and a test task. Fix the matrix, then present.
 
 Present a short summary, get user approval, then point to `/dev-harness:build-app`.
 
