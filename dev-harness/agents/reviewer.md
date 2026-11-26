@@ -35,3 +35,5 @@ File: path:line · Requirement: FR-x · Impact · Recommended fix
 ## Not reviewed / limitations
 ```
 Return a short summary to the orchestrator: status and counts per severity.
+
+Verify that all ```mermaid blocks in docs/PLAN.md follow valid Mermaid syntax (double-quoted node labels) and accurately match the implemented codebase.

@@ -40,3 +40,5 @@ Rules: order by dependency; keep tasks small enough for one Builder pass; every 
 Present a short summary, get user approval, then point to `/dev-harness:build-app`.
 
 After the user approves docs/PLAN.md, immediately invoke the dev-harness:build-app skill.
+
+Load and follow dev-harness:mermaid-diagrams to include a flowchart TD architecture diagram, erDiagram database schema, and sequenceDiagram in docs/PLAN.md.

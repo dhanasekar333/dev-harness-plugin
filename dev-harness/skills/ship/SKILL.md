@@ -26,3 +26,5 @@ Use AskUserQuestion, one action per question; never infer approval:
 
 If declined or unanswered: make **no** git changes (doc edits remain in the working tree; say so). Stage only the intended files by name, not `git add -A`, unless the user approves the full list.
 Report each action's actual result. Hooks may add their own confirmation prompt; that is expected, so do not work around it.
+
+Include the main flowchart TD architecture diagram from docs/PLAN.md inside README.md under an ## Architecture heading
